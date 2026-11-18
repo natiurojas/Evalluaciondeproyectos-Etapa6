@@ -1,0 +1,665 @@
+
+===== PAGINA 1 =====
+PRECOOPERATIVA BIBLIOTECA ESCOLAR
+Alcance de la primera versión
+(MVP)
+Selección de funciones indispensables a partir de las historias de usuario
+y los wireframes
+Proyecto: Digitalización y gestión de préstamos de la biblioteca escolar
+Etapa: 6 — Definición del alcance
+Fecha: Noviembre de 2026
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 2 =====
+1. Resumen ejecutivo
+La primera versión debe resolver el problema central detectado en la Etapa 1: la biblioteca registra los
+préstamos en papel, pierde información y no puede saber con certeza qué libro tiene cada persona. Por eso,
+el MVP se concentra en la circulación del catálogo: dar de alta libros y usuarios, buscar disponibilidad y
+registrar préstamos y devoluciones con fechas de vencimiento.
+Las pantallas revisadas muestran una aplicación muy completa: catálogo, descarga de PDF, reserva de libros
+físicos, notificaciones y perfil. Sin embargo, no todas esas funciones son indispensables para la primera
+versión. Varias suponen un producto de biblioteca digital que va más allá de la necesidad inicial y de las
+historias de usuario de la Etapa 3. El MVP las posterga para no perder foco.
+Declaración del MVP: la primera versión permite catalogar libros y usuarios, consultar la
+disponibilidad y registrar préstamos y devoluciones con vencimientos, para que la biblioteca sepa
+en todo momento qué libro tiene cada persona y pueda reclamar los vencidos a tiempo.
+2. Método de revisión y criterios
+2.1 Fuentes revisadas
+Etapa Aporte
+Etapa 1 Necesidad, producto y alcance inicial.
+Etapa 3 Tipos de usuario, cinco situaciones de uso (historias), datos, permisos y wireframes.
+Etapa 4 Variables e indicadores de investigación.
+Etapa 5 Objetivos SMART y KPI del proyecto.
+Wireframes 6 pantallas de escritorio y 12 pantallas móviles de la aplicación.
+2.2 Criterios de selección
+Una función se considera indispensable cuando cumple la mayoría de estos criterios:
+Criterio Pregunta que responde
+C1. Necesidad central ¿Resuelve el problema de los préstamos registrados en papel?
+C2. Uso operativo ¿Se usa todos los días o varias veces por semana?
+C3. Dependencia ¿Es prerrequisito para que otra función funcione?
+C4. Viabilidad ¿Se puede construir con los recursos, dispositivos y conocimientos disponibles?
+C5. Riesgo ¿Reduce pérdidas de registros, mora o datos incorrectos?
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 3 =====
+Criterio Pregunta que responde
+C6. KPI ¿Contribuye a los objetivos y KPI de la Etapa 5?
+2.3 Escala de decisión
+Categoría Significado
+Indispensable (MVP) Sin ella el flujo central no funciona o el sistema no se puede pilotar.
+Necesaria (v1.1) Mejora la experiencia, pero el piloto puede funcionar sin ella.
+Deseable (v2) Aporta valor adicional, pero requiere más datos, integraciones o tiempo.
+Fuera de alcance No corresponde al proyecto o no es viable en el plazo previsto.
+3. Revisión de las historias de usuario
+En la Etapa 3 se definieron cinco situaciones de uso. Las retomamos como historias de usuario (HU) para
+verificar qué cubre el MVP.
+ID Historia de usuario Rol Necesidad que
+expresa
+Decisión para el MVP
+HU-
+01
+Registrar un préstamo en el sistema
+al instante para saber siempre qué
+libro tiene cada persona y evitar
+pérdidas de registros.
+Bibliotecario/a Control diario de
+la circulación.
+Cubierta completa. Es el corazón
+del MVP.
+HU-
+02
+Buscar un libro por título o materia
+para saber si está disponible sin
+preguntar en el mostrador.
+Estudiante Autonomía y
+disponibilidad.
+Cubierta completa. Catálogo,
+búsqueda y ficha con disponibilidad.
+HU-
+03
+Consultar qué libros de mi curso
+están prestados y cuándo vencen
+para planificar las actividades de
+lectura.
+Docente Visión del curso. Cubierta parcialmente. El docente
+puede ver sus propios préstamos; la
+vista por curso queda para v1.1.
+HU-
+04
+Recibir un aviso automático de
+devoluciones vencidas para reclamar
+los libros a tiempo.
+Bibliotecario/a Morosidad y
+disponibilidad.
+Cubierta a nivel de sistema. Panel
+de vencidos y estados automáticos;
+el envío por correo o mensajería
+queda para v1.1.
+HU-
+05
+Generar un reporte mensual de
+préstamos para evaluar el uso de la
+biblioteca en la asamblea.
+Administrador/a Evaluación y
+rendición de
+cuentas.
+Cubierta con reporte básico.
+Contadores y exportación CSV;
+gráficos avanzados para v2.
+3.1 Cobertura de las capacidades por rol
+La Etapa 3 también describe qué puede hacer cada tipo de usuario. El MVP no implementa todas esas
+capacidades: prioriza las que sostienen el flujo de préstamos.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 4 =====
+Rol Capacidades de la Etapa 3 Cobertura en el MVP
+Bibliotecario/a Registrar libros, préstamos y devoluciones; consultar
+préstamos; gestionar vencidos; ver estadísticas; modificar
+libros y usuarios.
+Sí, con estadísticas básicas y sin gestión
+avanzada de usuarios.
+Estudiante Buscar libros; consultar su historial y fechas de
+devolución; ver disponibilidad.
+Sí, con su propio historial y disponibilidad.
+Docente Buscar; reservar material para clases; consultar préstamos
+de sus cursos; ver estadísticas de lectura.
+Parcial: búsqueda y préstamos propios.
+Reservas, vista por curso y estadísticas quedan
+para v1.1/v2.
+Administrador/a Gestionar usuarios; configurar el sistema; acceder a
+todos los registros; generar reportes.
+Sí, con usuarios, registros y reporte básico. La
+configuración avanzada queda para v1.1.
+Conclusión de la revisión: las historias HU-01, HU-02 y HU-05 se cubren de forma completa o suficiente.
+HU-03 y HU-04 se cubren parcialmente en el MVP y se completan en la siguiente versión. Esta decisión es
+deliberada: primero se asegura el registro confiable de préstamos y devoluciones; después se agregan las
+vistas por curso y los avisos externos.
+4. Revisión de las pantallas
+4.1 Inventario de wireframes
+Se revisaron dos collages: uno de escritorio y otro de móvil. Ambos representan la misma aplicación desde el
+punto de vista de estudiantes y docentes.
+Pantallas de escritorio (6)
+# Pantalla Función que muestra Decisión
+E1 Inicio Bienvenida, búsqueda, materias y libros
+destacados.
+Simplificar. El catálogo con buscador puede ser la
+pantalla de entrada.
+E2 Catálogo de
+libros
+Búsqueda, filtros, resultados y acceso al
+detalle.
+MVP. Es la base de HU-02.
+E3 Detalle del libro Datos, sinopsis, disponibilidad y opciones
+de acceso.
+MVP, sin las acciones de PDF y reserva.
+E4 Descarga de PDF Descarga de un archivo digital. Postergar. No está en la necesidad inicial ni en las
+historias.
+E5 Reservar libro
+físico
+Selección de biblioteca, fecha y
+confirmación.
+Postergar. Agrega estados y notificaciones que el MVP
+no necesita.
+E6 Mi cuenta /
+Reservas
+Reservas activas, historial y descargas. Adaptar a “Mis préstamos” con activos e historial.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 5 =====
+Pantallas móviles (12)
+# Pantalla Función que muestra Decisión
+M1 Bienvenida Presentación y acceso a “Comenzar” o
+“Iniciar sesión”.
+No indispensable. Se puede ir directo al login.
+M2 Iniciar sesión /
+Registrarse
+Autenticación, registro, recuperación
+y Google.
+MVP solo login. Registro y Google quedan para
+v1.1.
+M3 Inicio Búsqueda, materias y libros
+destacados.
+Simplificar. Catálogo con buscador.
+M4 Inicio (variante) Misma pantalla con barra de
+navegación inferior.
+No es una función nueva. Es una variante
+responsive.
+M5 Detalle del libro Datos, sinopsis, opciones de descarga
+y reserva.
+MVP, sin PDF ni reserva.
+M6 Descarga de PDF Confirmación y descarga. Postergar.
+M7 Reservar libro físico Disponibilidad, fecha y confirmación. Postergar.
+M8 Mi cuenta / Reservas Reservas activas, historial y descargas. Adaptar a “Mis préstamos”.
+M9 Categorías Grilla de materias. Integrar como filtro del catálogo; no hace falta una
+pantalla aparte.
+M10 Literatura Listado por categoría. Integrar como resultado filtrado del catálogo.
+M11 Mi cuenta Perfil y menú de opciones. Simplificar a perfil, mis préstamos y cerrar sesión.
+M12 Notificaciones Avisos de reservas y vencimientos. Postergar el centro de notificaciones; el MVP usa
+estados y panel de vencidos.
+4.2 Hallazgos de la revisión
+1. Las pantallas están pensadas para el usuario final, no para el personal de la biblioteca. Las 6
+pantallas de escritorio y las 12 móviles muestran la experiencia de consulta. No hay pantallas para que el
+bibliotecario registre un préstamo, una devolución, un libro o un usuario. Justamente, las historias HU-01,
+HU-04 y HU-05 —las más ligadas al problema central— no tienen wireframe.
+2. Los wireframes amplían el alcance. La descarga de PDF y la reserva de libros físicos no aparecen en la
+necesidad de la Etapa 1 ni en las cinco historias de la Etapa 3. Son funciones valiosas, pero no
+indispensables para la primera versión.
+3. Hay superposición de navegación. Inicio, Catálogo, Categorías, Literatura, Mi cuenta/Reservas, Mi
+cuenta y Notificaciones compiten por el mismo espacio. Para el MVP conviene reducir a tres áreas:
+Catálogo, Mis préstamos y Panel (personal).
+4. La pantalla “Mi cuenta / Reservas” se puede reutilizar. En lugar de reservas y descargas, el MVP
+muestra préstamos activos e historial. El cambio es de contenido, no de estructura visual.
+5. Faltan tres pantallas críticas: el panel de circulación, el formulario de alta/edición de libros y el
+formulario de alta/edición de usuarios. Sin ellas, el sistema no se puede operar.
+6. El estilo visual es aprovechable. La identidad, las tarjetas, el buscador y la ficha de libro se pueden
+conservar; el MVP no necesita las portadas ni las ilustraciones para funcionar.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 6 =====
+4.3 Decisión de diseño
+El MVP conserva el lenguaje visual de los wireframes y los patrones de catálogo, búsqueda y ficha. Cambia
+los flujos que no corresponden al problema central:
+Wireframe Cambio en el MVP
+“Descargar PDF” No se implementa.
+“Reservar libro físico” No se implementa. El préstamo se registra en el mostrador.
+“Mis reservas” Pasa a “Mis préstamos”, con activos e historial.
+“Notificaciones” Se reemplaza por estados (“por vencer”, “vencido”) y un panel de vencidos.
+Pantallas de usuario Se agregan tres pantallas de personal: panel, libro y usuario.
+5. Funciones indispensables del MVP
+Las siguientes funciones forman el alcance mínimo. Si alguna falta, el flujo central no se puede completar o
+el sistema no se puede pilotar.
+ID Función Historia /
+pantalla
+Por qué es
+indispensable
+Criterio de aceptación
+M1 Inicio de sesión y
+roles
+Transversal; M2 Sin autenticación no
+hay historial privado ni
+permisos.
+Login con correo y contraseña; tres roles
+(administrador/a, bibliotecario/a, usuario); cierre de
+sesión; acceso denegado a funciones no
+autorizadas; contraseñas cifradas.
+M2 Catálogo con
+búsqueda y
+filtros
+HU-02, HU-03;
+E1, E2, M3, M9,
+M10
+Es la puerta de entrada
+y reemplaza la consulta
+en el mostrador.
+Buscar por título, autor o materia; filtrar por materia
+y disponibilidad; paginar; mostrar estado vacío;
+responder en menos de 2 segundos con 5.000
+libros.
+M3 Ficha de libro
+con
+disponibilidad
+HU-02; E3, M5 Permite decidir si el
+libro está disponible
+antes de ir a la
+biblioteca.
+Mostrar título, autor, materia, editorial, año, ISBN,
+sinopsis, cantidad total, ejemplares disponibles y
+ubicación; indicar “disponible” o “sin ejemplares”.
+M4 Gestión de libros
+y ejemplares
+HU-01; sin
+wireframe
+Sin catálogo no hay
+sistema que consultar ni
+préstamos que
+registrar.
+Alta, edición y baja lógica; campos obligatorios;
+cantidad de ejemplares; importación CSV con vista
+previa y validación; evitar duplicados por ISBN o por
+título y autor.
+M5 Gestión de
+usuarios
+HU-01; sin
+wireframe
+Sin usuarios
+identificados no se
+puede registrar un
+préstamo.
+Alta, edición y baja lógica; nombre, correo, rol, curso
+e identificación; importación CSV; cuentas creadas
+por el personal, sin autorregistro.
+M6 Registro de
+préstamo
+HU-01; sin
+wireframe
+Es el núcleo del
+problema: saber quién
+tiene cada libro.
+Buscar usuario y libro; fecha de vencimiento
+sugerida a 14 días y editable; bloquear si no hay
+disponibilidad o si se supera el máximo de
+préstamos; guardar y descontar disponibilidad;
+confirmar con fecha de devolución.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 7 =====
+ID Función Historia /
+pantalla
+Por qué es
+indispensable
+Criterio de aceptación
+M7 Registro de
+devolución
+HU-01; sin
+wireframe
+Cierra el ciclo y repone
+la disponibilidad.
+Buscar el préstamo activo por usuario, libro o
+código; registrar fecha de devolución; reponer
+disponibilidad; cambiar el estado; permitir una
+observación por pérdida o deterioro.
+M8 Mis préstamos HU-02; E6, M8 Da autonomía al
+estudiante y reduce las
+consultas en el
+mostrador.
+Ver solo los préstamos propios; activos con fecha de
+vencimiento y estado; historial; no mostrar datos de
+otros usuarios; funcionar en móvil y escritorio.
+M9 Panel de
+circulación y
+vencidos
+HU-01, HU-04;
+sin wireframe
+Permite saber qué está
+prestado y actuar sobre
+la mora.
+Listar préstamos activos; filtrar por usuario, libro,
+curso y estado; destacar vencidos con días de atraso
+y vencimientos del día; accesos rápidos a
+devolución y recordatorio; contadores de activos y
+vencidos.
+M10 Reporte básico y
+exportación
+HU-05; sin
+wireframe
+Permite evaluar el uso y
+presentar datos en la
+asamblea.
+Contadores de libros, ejemplares, usuarios,
+préstamos activos, vencidos y préstamos del mes;
+top 5 de libros más prestados; filtro por período;
+exportación CSV.
+5.1 Requisitos no funcionales mínimos
+Estos requisitos no son “funciones”, pero sin ellos el MVP no es seguro ni confiable.
+Categoría Requisito Criterio verificable
+Seguridad Contraseñas cifradas,
+sesiones y permisos.
+Ninguna contraseña se guarda en texto plano; cada rol accede solo a lo que
+le corresponde.
+Privacidad Datos de estudiantes y
+docentes protegidos.
+Un usuario no puede ver préstamos ni datos de otra persona; el personal
+accede solo a lo necesario.
+Rendimiento Búsqueda y operaciones
+ágiles.
+Catálogo de 5.000 libros en menos de 2 segundos; préstamo en menos de 1
+minuto; devolución en menos de 30 segundos.
+Disponibilidad Uso durante el horario
+escolar.
+El sistema responde en horario de biblioteca; los errores muestran un
+mensaje claro y no pierden datos.
+Respaldo Recuperación ante fallas. Respaldo diario y prueba de restauración antes del piloto; exportación CSV
+disponible.
+Compatibilidad Uso en los dispositivos de la
+escuela.
+Diseño responsive desde 360 px; funciona en Chrome, Edge y Firefox
+actuales.
+Accesibilidad Uso por parte de toda la
+comunidad.
+Contraste suficiente, etiquetas en formularios, navegación con teclado y
+textos claros.
+Integridad Datos consistentes. La disponibilidad nunca es negativa; no se duplican préstamos activos del
+mismo ejemplar; las bajas son lógicas para conservar el historial.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 8 =====
+6. Funciones postergadas y fundamento
+Postergar no significa descartar. Significa construir primero lo que resuelve el problema y agregar lo demás
+con evidencia de uso.
+Función Origen Por qué no entra en el MVP Versión propuesta
+Descarga de PDF Wireframes Requiere almacenamiento, derechos de autor, control
+de archivos y ancho de banda. No está en la
+necesidad inicial ni en las historias.
+v1.1 o v2, según
+decisión de la
+biblioteca.
+Reserva de libro físico Wireframes Agrega estados (reservado, listo, retirado, vencido),
+calendario y avisos. El préstamo directo en el
+mostrador resuelve el caso principal.
+v1.1.
+Autorregistro y login con
+Google
+Wireframes Las cuentas deben ser creadas por la escuela para
+evitar usuarios falsos y proteger datos de menores.
+v1.1.
+Recuperación de
+contraseña
+Wireframes En el MVP, el administrador puede restablecerla. v1.1.
+Avisos automáticos por
+correo o mensajería
+HU-04, Etapa 5 Requiere integración con un servicio externo y datos
+de contacto verificados. El MVP muestra los vencidos y
+permite generar un recordatorio.
+v1.1.
+Centro de notificaciones Wireframes Es redundante con los estados de “Mis préstamos” y el
+panel de vencidos.
+v1.1.
+Historial de préstamos por
+curso para docentes
+HU-03 Requiere asignar cursos a docentes y definir permisos
+de privacidad. El MVP muestra los préstamos propios
+del docente.
+v1.1.
+Estadísticas avanzadas y
+gráficos
+HU-05 El MVP incluye contadores y exportación; los gráficos
+y comparaciones requieren más datos y tiempo.
+v2.
+Lector de códigos o QR Etapa 5 Es una mejora de velocidad, no un requisito para
+registrar préstamos.
+v1.1, si hay equipos
+disponibles.
+Multisede y ubicaciones Wireframes La biblioteca es una sola. Agregar sedes complica el
+modelo y la operación.
+v2.
+Multas, renovaciones y
+lista de espera
+No están en
+las historias
+Aumentan las reglas de negocio y no son necesarias
+para el piloto.
+v2 o fuera de
+alcance.
+App nativa para móviles Wireframes Una web responsive cubre el uso en teléfonos y
+computadoras con menor costo.
+v2, si se justifica.
+Favoritos,
+recomendaciones y
+novedades
+Wireframes Son funciones de descubrimiento, no de circulación. v2.
+Criterio para decir “no” en esta etapa: cada función postergada agrega estados, integraciones o datos que
+no resuelven el problema de los registros en papel. Incluirlas ahora retrasaría el piloto y aumentaría el riesgo
+de no llegar a una versión usable.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 9 =====
+7. Flujos de la primera versión
+7.1 Estudiante o docente
+1. Ingresa con su cuenta.
+2. Busca un libro por título, autor o materia.
+3. Abre la ficha y consulta la disponibilidad y la ubicación.
+4. Va a la biblioteca y retira el ejemplar.
+5. El bibliotecario registra el préstamo.
+6. En “Mis préstamos” ve la fecha de devolución y el estado.
+7. Si el plazo vence, el estado cambia a “vencido” y el bibliotecario lo ve en su panel.
+7.2 Bibliotecario/a
+1. Ingresa al sistema.
+2. Busca el libro y el usuario.
+3. Registra el préstamo: el sistema calcula el vencimiento y descuenta la disponibilidad.
+4. Entrega el libro.
+5. Cuando el libro vuelve, busca el préstamo y registra la devolución: el sistema repone la disponibilidad.
+6. Revisa el panel de vencidos y genera un recordatorio para los casos necesarios.
+7. Exporta el reporte mensual para la asamblea.
+7.3 Administrador/a
+1. Carga el catálogo inicial y los usuarios mediante CSV.
+2. Revisa roles, cursos y datos obligatorios.
+3. Consulta los contadores y el reporte mensual.
+4. Gestiona altas, bajas y correcciones.
+7.4 Flujo resumido
+Login → Catálogo → Ficha del libro → (mostrador) → Préstamo → Mis préstamos
+↓
+Devolución → Disponibilidad
+Login (personal) → Panel → Buscar usuario/libro → Préstamo o devolución
+↓
+Vencidos → Recordatorio → Reporte
+8. Modelo de datos mínimo
+El modelo se mantiene simple para reducir el esfuerzo de la primera versión. La disponibilidad se calcula a
+partir de los préstamos activos.Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 10 =====
+Entidad Campos principales Reglas
+Usuario id, nombre, correo, contraseña cifrada, rol, curso,
+identificación, activo, fecha de alta.
+El correo es único; el rol define los permisos;
+la baja es lógica.
+Libro id, título, autor, materia, editorial, año, ISBN, sinopsis,
+ejemplares totales, ubicación, activo.
+El ISBN es único cuando existe; la baja es
+lógica; los ejemplares totales no pueden ser
+negativos.
+Préstamo id, libro, usuario, fecha de préstamo, fecha de
+vencimiento, fecha de devolución, estado, registrado
+por, observaciones.
+Un préstamo está activo mientras no tenga
+fecha de devolución; el vencimiento se calcula
+al crearlo.
+Configuración
+(opcional)
+clave, valor. Guarda el plazo de préstamo y el máximo de
+préstamos por usuario.
+8.1 Reglas de cálculo
+Disponibilidad = ejemplares totales − préstamos activos del libro.
+Préstamo activo = préstamo sin fecha de devolución.
+Vencido = préstamo activo con fecha de vencimiento anterior a hoy.
+Por vencer = préstamo activo cuya fecha de vencimiento es hoy o dentro de los próximos tres días.
+Un usuario no puede superar el máximo de préstamos activos (valor inicial: 3).
+Un libro no puede tener más préstamos activos que ejemplares totales.
+Las fechas se registran en la zona horaria local y el vencimiento se considera hasta el final del día.
+8.2 Decisiones de modelado para el MVP
+Decisión Recomendación Motivo
+¿Ejemplares por cantidad o
+por código individual?
+Por cantidad en el MVP. Alcanza para controlar disponibilidad y reduce el
+esfuerzo. El control por ejemplar puede agregarse en
+v1.1.
+¿Cuántos roles? Tres: administrador/a, bibliotecario/a y
+usuario (estudiante o docente).
+Cubre permisos y privacidad sin una matriz compleja.
+¿Quién crea las cuentas? El personal. Evita registros falsos y protege datos de menores.
+¿Plazo de préstamo? 14 días, editable al registrar. Es un valor inicial razonable; luego puede
+configurarse.
+¿Máximo de préstamos? 3 por usuario. Evita acaparar ejemplares y facilita el control.
+¿Reservas y PDF? Fuera del MVP. No son necesarios para el flujo de circulación.
+9. Criterios de aceptación y plan de piloto
+9.1 Definición de “primera versión terminada”
+El MVP se considera listo para pilotear cuando se cumplen estos puntos:
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 11 =====
+[ ] Los tres roles pueden iniciar sesión y ven solo las funciones que les corresponden.
+[ ] Se cargaron al menos 100 libros y 50 usuarios mediante CSV.
+[ ] Se registraron 20 préstamos y 20 devoluciones sin errores.
+[ ] La disponibilidad se actualiza correctamente después de cada operación.
+[ ] El panel de vencidos muestra los préstamos correctos.
+[ ] Un estudiante ve solo sus propios préstamos.
+[ ] Un bibliotecario encuentra un préstamo y registra una devolución en menos de 1 minuto.
+[ ] Se probó el respaldo y la restauración de la base de datos.
+[ ] No hay errores críticos abiertos; las limitaciones conocidas están documentadas.
+[ ] Existe una guía de uso de una página para el personal.
+9.2 Piloto sugerido
+Elemento Definición
+Duración 2 semanas.
+Alcance 1 bibliotecario/a, 2 cursos, entre 100 y 200 libros.
+Capacitación 1 encuentro de 1 hora y una guía escrita.
+Registro Préstamos y devoluciones reales, en paralelo con el registro en papel solo como control.
+Medición Tiempo por operación, cantidad de registros, errores, vencidos y consultas en el mostrador.
+Criterio de avance Si se cumplen al menos 4 de los 5 indicadores, se escala al catálogo completo.
+9.3 Indicadores para validar el MVP
+KPI de la Etapa 5 Cómo contribuye el MVP Meta del piloto
+Porcentaje del catálogo
+digitalizado
+Importación CSV y alta diaria de libros. Cargar el 100% de los libros del piloto.
+Porcentaje de devoluciones
+vencidas
+Fechas de vencimiento, panel de vencidos y
+recordatorios.
+Reducir la mora del grupo piloto.
+Tiempo promedio de atención Préstamo y devolución simples, sin pasos
+innecesarios.
+Menos de 1 minuto por operación.
+Porcentaje de socios que
+cumplen su rol
+Roles claros y tareas concretas. 90% de los socios del piloto con tareas
+cumplidas.
+También se registrarán métricas de contexto: libros cargados por semana, consultas recibidas en el
+mostrador y cantidad de préstamos por semana.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 12 =====
+10. Riesgos y decisiones abiertas
+10.1 Riesgos
+Riesgo Impacto Mitigación
+Crecimiento del alcance por las funciones de
+los wireframes
+Retraso y dispersión del
+equipo.
+Congelar la lista del MVP y aprobar cambios por
+escrito.
+Falta de pantallas para el personal Retrabajo y errores de
+diseño.
+Diseñar las tres pantallas críticas antes de
+programar.
+Datos duplicados o incompletos en la
+importación
+Catálogo poco confiable. Validación, vista previa y reglas de duplicados.
+Baja adopción del bibliotecario/a Se vuelve al papel. Capacitación, guía de una página y
+acompañamiento en el piloto.
+Problemas de conectividad o equipos El sistema no se puede
+usar.
+Prueba en los dispositivos reales y plan de
+contingencia.
+Privacidad de datos de menores Riesgo legal y de
+confianza.
+Acceso por roles, datos mínimos y consentimiento
+institucional.
+Derechos de autor de los PDF Riesgo legal. Postergar la descarga de PDF hasta definir
+permisos.
+Dependencia de una sola persona La operación se detiene. Capacitar a un suplente y documentar el
+procedimiento.
+10.2 Decisiones que deben confirmarse con la biblioteca
+Decisión Recomendación Responsable
+¿El MVP se centra en circulación o en biblioteca digital? Circulación. Equipo y bibliotecario/a.
+¿Se implementan reservas y PDF en la primera versión? No; quedan para v1.1. Equipo y bibliotecario/a.
+¿Cuántos roles y quién puede eliminar usuarios? Tres roles; solo administrador/a elimina. Equipo.
+¿Ejemplares por cantidad o por código? Por cantidad en el MVP. Equipo.
+¿Plazo y máximo de préstamos? 14 días y 3 préstamos. Biblioteca.
+¿Avisos automáticos o solo panel de vencidos? Panel y recordatorio manual en el MVP. Biblioteca.
+¿Importación CSV obligatoria? Sí, para catálogo y usuarios. Equipo.
+11. Conclusión
+La primera versión no debe intentar ser la aplicación completa que muestran los wireframes. Debe ser el
+sistema mínimo que resuelve el problema central: catalogar, buscar, prestar, devolver y controlar
+vencimientos. Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
+
+
+===== PAGINA 13 =====
+El MVP conserva lo mejor del diseño revisado —la búsqueda, la ficha del libro y la claridad visual— y deja
+para más adelante las funciones que agregan complejidad sin resolver la necesidad inmediata: descarga de
+PDF, reservas, notificaciones externas, estadísticas avanzadas y aplicación nativa.
+Con este alcance, el equipo puede construir una versión pilotable, medir su impacto con los KPI de la Etapa 5
+y decidir con datos qué construir después.
+Anexo A. Matriz de trazabilidad
+Historia Función del MVP Pantalla o evidencia Estado
+HU-01 M1, M4, M5, M6, M7, M9 Sin wireframe para el personal; se diseña en el MVP. Cubierta.
+HU-02 M2, M3, M8 E1, E2, E3, E6, M3, M5, M8. Cubierta.
+HU-03 M2, M3, M8 E2, E3, M8; falta la vista por curso. Parcial; v1.1.
+HU-04 M9 Panel de vencidos y estados. Parcial; aviso externo en v1.1.
+HU-05 M10 Reporte básico y CSV. Cubierta.
+Anexo B. Resumen MoSCoW
+Prioridad Funciones
+Must Login y roles; catálogo; ficha con disponibilidad; gestión de libros; gestión de usuarios; préstamo;
+devolución; mis préstamos; panel de vencidos; reporte básico.
+Should Recordatorio manual; importación CSV de usuarios; perfil editable; filtros por curso.
+Could Notificaciones en la aplicación; renovaciones; lector de códigos; gráficos.
+Won't (esta
+versión)
+Descarga de PDF; reserva de libros físicos; login con Google; autorregistro; app nativa; multas.
+Anexo C. Notas de la revisión
+Los wireframes de escritorio y móvil se revisaron por separado. El de escritorio contiene 6 pantallas; el
+móvil, 12. Ambos muestran la experiencia de estudiantes y docentes.
+No se encontraron pantallas de bibliotecario/a ni de administrador/a. Esta ausencia es una brecha de
+diseño, no una decisión de alcance.
+Las funciones de PDF y reserva aparecen en los wireframes, pero no en la Etapa 1 ni en las cinco historias
+de la Etapa 3. Se las trata como propuestas de diseño, no como requisitos confirmados.
+Las decisiones de este documento deben validarse con la bibliotecaria antes de comenzar el desarrollo.
+Precooperativa Biblioteca Escolar — Etapa 6 — Alcance de la primera versión (MVP)
